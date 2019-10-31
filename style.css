@@ -1,0 +1,255 @@
+#header-sec {
+  width: 100%;
+  height: 70px;
+  padding: 0;
+  background-color: #233;
+  position: relative;
+}
+
+@media (min-width: 600px){
+main, #about-sec, #header-nav, #contact-sec, #footer-sec {
+  padding: 0px 12%;
+  }
+}
+
+
+/* display: fixed;   */
+
+/* Header styling ===> */
+
+#header-nav {
+  background-color: #fff; 
+  width: 100%;
+  height: inherit;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  z-index: 1;
+  position: fixed;
+  margin-top: -5px;
+  background-color: inherit;
+}
+#header-logo {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  /* background-color: #ccc; */
+}
+#header-nav-links {
+  /* background-color: aqua; */
+  margin-right: 0;
+  text-align: right;
+}
+#link-divs {
+  display: inline-block;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 26px;
+  margin-left: 24px;
+  position: relative;
+  top: 35%;
+  height: 100%;
+  cursor: pointer;
+}
+#links{
+  color:#4f8;
+  border: solid 2px #4f8;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+#links:hover {
+  color: #FFD300;
+  border: solid 2px #FFD300;
+  border-radius: 5px;
+}
+/* About section */
+#about-sec {
+  margin-top: 30px;
+}
+
+
+#about-container {
+  width: 100%;
+  /* background-image: url("https://i.imgur.com/guE4MKF.png"); */
+  /* opacity: 0.9; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0px;
+  height: 50vh;
+  /* background-color: #eee; */
+}
+
+/* <=== Header styling */
+
+
+.headings {
+  font-family: 'PT Sans Caption', sans-serif;  
+  text-align: center;
+  width: 100%;
+  border: solid 2px #000;
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  /* color: #df2800; */
+}
+
+
+/* About Section */
+
+#about-container {
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  grid-gap: 15px; 
+  margin-bottom: 40px;
+}
+
+#about-column-left {
+  /* border: solid 3px #32CD32; */
+  font-family: 'PT Sans Caption', sans-serif;
+  border-radius: 2px;
+}
+
+#about-column-right {
+  /* border: solid 2px #FFD300; */
+  font-family: 'PT Sans Caption', sans-serif;
+  border-radius: 2px;
+  font-size: 30px;
+  padding: 50px;
+}
+#avatar-social-media {
+  display: inline-flex;
+}
+.icon-div {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+/* Experience Section */
+
+#experience-sec {
+  display: inline-block;
+  width: 100%;
+}
+.experiences-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 9fr 1fr;
+  grid-gap: "15px";
+  margin-bottom: 35px;
+}
+.work-exp-bg {
+  width: 100%;
+  background-color: #ccc;
+  border: solid #ccc 1px;
+  height: auto;
+  /* background-image: url("https://i.imgur.com/5u8ds11.png"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.timelines {
+  padding: 20px;  
+}
+.edu-details-bg {
+  width: 100%;
+  background-color: #ccc;
+  border: solid #ccc 1px;
+  height: auto;
+  /* background-image: url("https://i.imgur.com/RP2Ew3C.png"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#edu-container #exp-container {
+  margin: 0 auto;
+  display: grid;
+  width: 85%;
+  padding: 0;
+  grid-template-columns: 1fr;
+  /* border: 1px solid #000; */
+}
+.edu-title .exp-title {
+  padding: 5px;
+  margin: 0;
+  border-right: 1px solid #000;
+}
+.edu-details .exp-title {
+  padding: 5px;
+  margin: 0;
+} 
+
+.headerThree {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.group-listing {
+  /* width: 100%; */
+  margin-left: 10px;
+  display: inline;
+}
+.skills-outer {
+  width: 100%; 
+  height: 200px;
+  background-color: #ccc;
+  position: relative;
+  cursor: pointer;
+}
+.skills-inner {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  top: 20%;
+  left: 30%;
+  /* background-color: royalblue; */
+}
+
+/* Project section */
+
+#projects-sec {
+  margin-top: 25px;
+}
+#project-cards {
+  margin-top: 10px;
+}
+
+ #project-img-div {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+#project-img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+#project-extra {
+  width: 100%;
+  /* height: 50px; */
+  font-size: 18px;
+  padding: 7px;
+  position: relative;
+}
+
+footer {
+  padding-top: 20px;
+  width: 100%;
+  height: 300px;
+  background-color: #233;
+  margin-top: 50px;
+}
+#contact-container {
+  width: 100%;
+  background-color: #ccc;
+  padding: 24px 0;
+}
+
+.icon {
+  padding: 0 30px;
+}

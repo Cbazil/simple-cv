@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+
+  <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
+
+  <!-- Vue JS CDN -->
+  <script src="https://unpkg.com/vue"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+
+  <title>Cbazil Resume</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="semantic/dist/semantic.min.js"></script>
+</head>
+
+<body>
+  <div id="main-container">
+  <!-- Header-navigation -->
+  <div id="header-sec">
+    <header id="header-nav">
+      <div id="header-logo">
+        <img src="https://imgur.com/OOAxZrR.png" width="100%" height="100%">
+      </div>
+      <div id="header-nav-links" class="right item">
+        <div id="link-divs">
+          <a id="links" class="item">
+            About
+          </a>
+        </div>
+        <div id="link-divs">
+          <a id="links" class="item">
+            Experience
+          </a>
+        </div>
+        <div id="link-divs">
+          <a id="links" class="item">
+            Education
+          </a>
+        </div>
+        <div id="link-divs">
+          <a id="links" class="item">
+            Skills
+          </a>
+        </div>
+        <div id="link-divs">
+          <a id="links" class="item">
+            Contacts
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+    <!-- About section -->
+  <div id="about-sec">
+  <h3 class="headings">About Me</h3>
+  <div id="about-container">
+    <div id="about-column-left">
+      <div class="ui card">
+        <div id="avatar-img" class="image">
+          <img src="https://i.imgur.com/FgXoBpb.jpg" />
+        </div>
+        <div id="avatar-info" class="content">
+          <div class="content">
+            <h2 class="header">Chad Bazil Bosch</h2>
+            <h3 class="header">Junior Software Development</h3>
+          </div>
+        </div>
+        <div id="avatar-social-media" class="extra content">
+          <!-- <a>
+            <i class="user icon"></i>
+            22 Friends
+          </a> -->
+          <div class="icon-div"></div>
+          <div class="icon-div"></div>
+          <div class="icon-div"></div>
+        </div>
+      </div>
+    </div>
+    <div id="about-column-right">
+      <p>
+        I'd love to be involved in computer sciences. I love working with computers and software applications.
+        I enjoy playing video games and reading Manga aswell as Comics.
+        I am very goal driven and like discovering new interests as well as learning new things.
+        I'm an honest , trustworthy, hardworking, reliable and creative person.
+        I work well underpressure, I'm able to take initative and have strong leadership qualities.
+      </p>
+    </div>
+  </div>
+  </div>
+    <main>
+      <h3 class="headings">Experience & Education</h3>
+      <div id="experience-sec">
+        <div id="work-experience-sec" class="experiences-grid">
+          <div class="work-exp-bg"></div>
+          <div id="edu-container" class="timelines">
+            <div class="ui celled grid" v-for="edu in eduDetails">
+              <h3 class="headerThree" v-if="!edu.school">Tertiary Education</h3>
+              <h3 class="headerThree" v-if="edu.school">Secondary Education</h3>
+              <div v-if="edu.institution" class="row">
+                <div class="edu-title four wide column">Institution: </div>
+                <div class="edu-details six wide column">{{ edu.institution }}</div>
+              </div>
+              <div v-if="edu.duration" class="row">
+                <div class="edu-title four wide column">Duration:</div>
+                <div class="edu-details six wide column">{{ edu.duration }}</div>
+              </div>
+              <div v-if="edu.course" class="row">
+                <div class="edu-title four wide column">Course:</div>
+                <div class="edu-details six wide column">{{ edu.course }}</div>
+              </div>
+              <div v-if="edu.subject" class="row">
+                <div class="edu-title four wide column">Subject:</div>
+                <div class="edu-details twelve wide column">
+                  <div class="group-listing" v-for="sub in edu.subject">
+                    <i class="chess bishop icon"></i> {{ sub }}
+                  </div>
+                </div>
+              </div>
+              <div v-if="edu.skills" class="row">
+                <div class="edu-title four wide column">Skills:</div>
+                <div class="edu-details twelve wide column">
+                  <div class="group-listing" v-for="skill in edu.skills">
+                    <i class="chess bishop icon"></i> {{ skill }}
+                  </div>
+                </div>
+              </div>
+              <div v-if="edu.school" class="row">
+                <div class="edu-title four wide column">School:</div>
+                <div class="edu-details six wide column">{{ edu.school }}</div>
+              </div>
+              <div v-if="edu.completed" class="row">
+                <div class="edu-title four wide column">Completed:</div>
+                <div class="edu-details six wide column">{{ edu.completed }}</div>
+              </div>
+              <div v-if="edu.qualification" class="row">
+                <div class="edu-title four wide column">Qualification:</div>
+                <div class="edu-details six wide column">{{ edu.qualification }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="work-exp-bg">
+
+          </div>
+        </div>
+        <div id="education-details" class="experiences-grid">
+          <div class="edu-details-bg"></div>
+          <div id="exp-container" class="timelines">
+            <div class="ui celled grid" v-for="exp in expDetails">
+              <h3 class="headerThree" v-if="!exp.waiting">Voluntarily Work EXperience</h3>
+              <h3 class="headerThree" v-if="exp.waiting">Job Shadowing</h3>
+              <div v-if="exp.company" class="row">
+                <div class="exp-title four wide column">Company: </div>
+                <div class="exp-details six wide column">{{ exp.company }}</div>
+              </div>
+              <div v-if="exp.position" class="row">
+                <div class="exp-title four wide column">Position:</div>
+                <div class="exp-details six wide column">{{ exp.position }}</div>
+              </div>
+              <div v-if="exp.duration" class="row">
+                <div class="exp-title four wide column">Duration:</div>
+                <div class="exp-details six wide column">{{ exp.duration }}</div>
+              </div>
+              <div v-if="exp.duties" class="row">
+                <div class="exp-title four wide column">Duties:</div>
+                <div class="exp-details six wide column">{{ exp.duties }}</div>
+              </div>
+              <!-- <div v-if="edu.skills" class="row"><div class="edu-title four wide column">Skills:</div><div class="edu-details six wide column">{{ edu.skills }}</div></div> -->
+            </div>
+          </div>
+          <div class="edu-details-bg"></div>
+        </div>
+      </div>
+      <div id="skills-sec">
+        <h3 class="headings">Skills Acquired</h3>
+        <div width="100%" class="ui four cards">
+          <div v-for="skill in skillDetails" class="green card">
+            <div v-if="!skill.show" @mouseover="skill.show = true" class="skills-outer">
+              <div class="skills-inner">
+                <img :src="skill.image" width="100%" height="100%" />
+              </div>
+            </div>
+            <div v-if="skill.show" @mouseleave="skill.show = false" class="skills-outer">
+              <img :src="skill.description" width="100%" height="100%" />
+            </div>
+            <div class="extra">
+              <h5>{{ skill.name }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="projects-sec">
+        <h3 class="headings">Projects</h3>
+        <div id="project-cards" width="100%" class="ui two cards">
+          <div v-for="project in projects" class="blue card">
+            <div id="project-img-div" class="image">
+              <a v-bind:href="project.link"><img :src="project.image" id="project-img" /></a>
+            </div>
+            <div id="project-extra" class="extra">
+              <p>{{ project.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="contact-container">
+        <div id="contact-sec">
+          <div class="ui equal width center aligned padded grid">
+              <div class="row">
+                <div class="column" style="color: #fff">
+                  <h2>Contact number:</h2>
+                  <h3>+27 78 240 5228</h3>
+                </div>
+                <div class="column" style="color: #fff">
+                  <h2>Email Address:</h2>
+                  <h3>chadbosch08@gmail.com</h3>
+                </div>
+                <div class="column" style="color: #fff">
+                  <h2>Social Links:</h2>
+                    <div style="margin-top: 25px">
+                      <i class="large facebook square icon"></i>
+                      <i class="large twitter icon"></i>
+                      <i class="large medium icon"></i>
+                  </div>
+                </div>            
+              </div>       
+          </div>
+        </div>
+      </div>
+      <div id="footer-sec">
+        <div class="ui equal width aligned padded grid" style="color: white; padding: 30px 0 2px 0">
+          <div class="row">
+              <div class="column">
+                <h4>Crafted By Cbazil</h4>
+                <h5>Crafted with Vue.js & Semantic-ui</h5>
+              </div>
+              <div class="column"></div>
+              <div class="column" style="text-align: right;">
+                  <br>
+                  <h4>&copy; All Rights Reserved | 2019</h4>
+              </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Load our vue data -->
+  <script src="main.js"></script>
+</body>
+
+</html>
