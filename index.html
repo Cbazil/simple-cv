@@ -30,27 +30,27 @@
       </div>
       <div id="header-nav-links" class="right item">
         <div id="link-divs">
-          <a id="links" class="item">
+          <a href="#about-sec" id="links" class="item">
             About
           </a>
         </div>
         <div id="link-divs">
-          <a id="links" class="item">
-            Experience
-          </a>
-        </div>
-        <div id="link-divs">
-          <a id="links" class="item">
+          <a href="#education-sec" id="links" class="item">
             Education
           </a>
         </div>
         <div id="link-divs">
-          <a id="links" class="item">
+          <a href="#experience-sec" id="links" class="item">
+            Experience
+          </a>
+        </div>
+        <div id="link-divs">
+          <a href="#skills-sec" id="links" class="item">
             Skills
           </a>
         </div>
         <div id="link-divs">
-          <a id="links" class="item">
+          <a href="#contact-sec" id="links" class="item">
             Contacts
           </a>
         </div>
@@ -59,46 +59,45 @@
   </div>
     <!-- About section -->
   <div id="about-sec">
-  <h3 class="headings">About Me</h3>
-  <div id="about-container">
-    <div id="about-column-left">
-      <div class="ui card">
-        <div id="avatar-img" class="image">
-          <img src="https://i.imgur.com/FgXoBpb.jpg" />
-        </div>
-        <div id="avatar-info" class="content">
-          <div class="content">
-            <h2 class="header">Chad Bazil Bosch</h2>
-            <h3 class="header">Junior Software Development</h3>
+    <h3 class="headings">About Me</h3>
+    <div id="about-container">
+      <div id="about-column-left">
+        <div class="ui card">
+          <div id="avatar-img" class="image">
+            <img src="https://i.imgur.com/FgXoBpb.jpg" />
+          </div>
+          <div id="avatar-info" class="content">
+            <div class="content">
+              <h2 class="header">Chad Bazil Bosch</h2>
+              <h3 class="header">Junior Software Development</h3>
+            </div>
+          </div>
+          <div id="avatar-social-media" class="extra content">
+            <!-- <a>
+              <i class="user icon"></i>
+              22 Friends
+            </a> -->
+            <div class="icon-div"><a href="https://github.com/Cbazil"><i class="fab fa-github links" ></i></a></div>
+            <div class="icon-div"><a href="https://www.linkedin.com/in/chad-bosch-b6a3b716b/"><i class="fab fa-linkedin links"></i></a></div>
+            <div class="icon-div"> <a href="https://www.freecodecamp.org/cbazil"><i class="fab fa-free-code-camp links"></i></a></div>
           </div>
         </div>
-        <div id="avatar-social-media" class="extra content">
-          <!-- <a>
-            <i class="user icon"></i>
-            22 Friends
-          </a> -->
-          <div class="icon-div"><a href="https://github.com/Cbazil"><i class="fab fa-github links" ></i></a></div>
-          <div class="icon-div"><a href="https://www.linkedin.com/in/chad-bosch-b6a3b716b/"><i class="fab fa-linkedin links"></i></a></div>
-          <div class="icon-div"> <a href="https://www.freecodecamp.org/cbazil"><i class="fab fa-free-code-camp links"></i></a></div>
-        </div>
+      </div>
+      <div id="about-column-right">
+        <p>
+          I'd love to be involved in computer sciences. I love working with computers and software applications.
+          I enjoy playing video games and reading Manga aswell as Comics.
+          I am very goal driven and like discovering new interests as well as learning new things.
+          I'm an honest , trustworthy, hardworking, reliable and creative person.
+          I work well underpressure, I'm able to take initative and have strong leadership qualities.
+        </p>
       </div>
     </div>
-    <div id="about-column-right">
-      <p>
-        I'd love to be involved in computer sciences. I love working with computers and software applications.
-        I enjoy playing video games and reading Manga aswell as Comics.
-        I am very goal driven and like discovering new interests as well as learning new things.
-        I'm an honest , trustworthy, hardworking, reliable and creative person.
-        I work well underpressure, I'm able to take initative and have strong leadership qualities.
-      </p>
-    </div>
-  </div>
   </div>
     <main>
-      <h3 class="headings">Experience & Education</h3>
-      <div id="experience-sec">
-        <div id="work-experience-sec" class="experiences-grid">
-          <div class="work-exp-bg"></div>
+      <div id="education-sec">
+      <h3 class="headings">Education</h3>
+        <div id="education-sec-container">
           <div id="edu-container" class="timelines">
             <div class="ui celled grid" v-for="edu in eduDetails">
               <h3 class="headerThree" v-if="!edu.school">Tertiary Education</h3>
@@ -119,7 +118,7 @@
                 <div class="edu-title four wide column">Subject:</div>
                 <div class="edu-details twelve wide column">
                   <div class="group-listing" v-for="sub in edu.subject">
-                    <i class="chess bishop icon"></i> {{ sub }}
+                    <i class="chess bishop icon list-icon"></i> {{ sub }}
                   </div>
                 </div>
               </div>
@@ -127,7 +126,7 @@
                 <div class="edu-title four wide column">Skills:</div>
                 <div class="edu-details twelve wide column">
                   <div class="group-listing" v-for="skill in edu.skills">
-                    <i class="chess bishop icon"></i> {{ skill }}
+                    <i class="chess bishop icon list-icon"></i> {{ skill }}
                   </div>
                 </div>
               </div>
@@ -145,12 +144,10 @@
               </div>
             </div>
           </div>
-          <div class="work-exp-bg">
 
-          </div>
         </div>
-        <div id="education-details" class="experiences-grid">
-          <div class="edu-details-bg"></div>
+        <div id="experience-sec" class="experiences-grid">
+          <h3 class="headings">Experience</h3>
           <div id="exp-container" class="timelines">
             <div class="ui celled grid" v-for="exp in expDetails">
               <h3 class="headerThree" v-if="!exp.waiting">Voluntarily Work EXperience</h3>
@@ -174,12 +171,11 @@
               <!-- <div v-if="edu.skills" class="row"><div class="edu-title four wide column">Skills:</div><div class="edu-details six wide column">{{ edu.skills }}</div></div> -->
             </div>
           </div>
-          <div class="edu-details-bg"></div>
         </div>
       </div>
       <div id="skills-sec" class="ui">
         <h3 class="headings">Skills Acquired</h3>
-        <div width="100%" class="ui cards">
+        <div width="100%" class="ui cards centered">
           <div v-for="skill in skillDetails" class="green card">
             <div v-if="!skill.show" @mouseover="skill.show = true" class="skills-outer">
               <div class="skills-inner">
@@ -190,7 +186,7 @@
               <img :src="skill.description" width="100%" height="100%" />
             </div>
             <div class="extra">
-              <h5>{{ skill.name }}</h5>
+              <a :href="skill.link"><h4 class="link-colors">{{ skill.name }}</h4></a>
             </div>
           </div>
         </div>
