@@ -6,12 +6,16 @@
   position: relative;
 }
 
-@media (min-width: 600px){
-main, #about-sec, #header-nav, #contact-sec, #footer-sec {
-  padding: 0px 12%;
+@media (min-width: 600px) {
+  main,
+  #about-sec,
+  #header-nav,
+  #contact-sec,
+  #footer-sec {
+    padding: 0px 12%;
   }
 }
-@media (max-width: 1300px){
+@media (max-width: 1300px) {
   #about-column-right {
     padding: 10px;
   }
@@ -19,13 +23,13 @@ main, #about-sec, #header-nav, #contact-sec, #footer-sec {
     font-size: 25px;
   }
   #header-sec {
-  height: 55px;    
+    height: 55px;
   }
   #link-divs > a {
-  font-size: 18px;
+    font-size: 18px;
   }
 }
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
   #about-column-right {
     padding: 10px;
   }
@@ -39,7 +43,7 @@ main, #about-sec, #header-nav, #contact-sec, #footer-sec {
 /* Header styling ===> */
 
 #header-nav {
-  background-color: #fff; 
+  background-color: #fff;
   width: 100%;
   height: inherit;
   display: grid;
@@ -61,7 +65,7 @@ main, #about-sec, #header-nav, #contact-sec, #footer-sec {
 }
 #link-divs {
   display: inline-block;
-  font-family: 'PT Sans Caption', sans-serif;
+  font-family: "PT Sans Caption", sans-serif;
   font-size: 26px;
   margin-left: 24px;
   position: relative;
@@ -69,23 +73,21 @@ main, #about-sec, #header-nav, #contact-sec, #footer-sec {
   height: 100%;
   cursor: pointer;
 }
-#links{
-  color:#4f8;
+#links {
+  color: #4f8;
   border: solid 2px #4f8;
   border-radius: 5px;
   padding: 0 5px;
-  
 }
 #links:hover {
-  color: #FFD300;
-  border: solid 2px #FFD300;
+  color: #ffd300;
+  border: solid 2px #ffd300;
   border-radius: 5px;
 }
 /* About section */
 #about-sec {
   margin-top: 30px;
 }
-
 
 #about-container {
   width: 100%;
@@ -103,7 +105,7 @@ main, #about-sec, #header-nav, #contact-sec, #footer-sec {
 /* <=== Header styling */
 
 .headings {
-  font-family: 'PT Sans Caption', sans-serif;  
+  font-family: "PT Sans Caption", sans-serif;
   text-align: center;
   width: 100%;
   border: solid 2px #4f8;
@@ -115,25 +117,24 @@ main, #about-sec, #header-nav, #contact-sec, #footer-sec {
   background-color: #233;
 }
 
-
 /* About Section */
 
 #about-container {
   display: grid;
   grid-template-columns: 2fr 6fr;
-  grid-gap: 15px; 
+  grid-gap: 15px;
   margin-bottom: 40px;
 }
 
 #about-column-left {
   /* border: solid 3px #32CD32; */
-  font-family: 'PT Sans Caption', sans-serif;
+  font-family: "PT Sans Caption", sans-serif;
   border-radius: 2px;
 }
 
 #about-column-right {
   /* border: solid 2px #FFD300; */
-  font-family: 'PT Sans Caption', sans-serif;
+  font-family: "PT Sans Caption", sans-serif;
   /* border-radius: 2px; */
   font-size: 30px;
   padding: 50px;
@@ -177,7 +178,7 @@ main, #about-sec, #header-nav, #contact-sec, #footer-sec {
   background-size: cover;
 } */
 .timelines {
-  padding: 20px;  
+  padding: 20px;
 }
 /* .edu-details-bg {
   width: 100%;
@@ -205,7 +206,7 @@ main, #about-sec, #header-nav, #contact-sec, #footer-sec {
 .edu-details .exp-title {
   padding: 5px;
   margin: 0;
-} 
+}
 
 .headerThree {
   text-align: center;
@@ -219,7 +220,7 @@ main, #about-sec, #header-nav, #contact-sec, #footer-sec {
   flex-wrap: wrap;
 }
 .skills-outer {
-  width: 100%; 
+  width: 100%;
   height: 200px;
   background-color: #233;
   position: relative;
@@ -244,25 +245,25 @@ main, #about-sec, #header-nav, #contact-sec, #footer-sec {
   margin-top: 10px;
 }
 
- #project-img-div {
+#project-img-div {
   width: 100%;
   height: 300px;
   position: relative;
   overflow: hidden;
 }
 
-#project-img{
+#project-img {
   width: 100%;
   height: 100%;
   position: relative;
   cursor: pointer;
 }
-#project-img:hover{
+#project-img:hover {
   width: 110%;
   height: 110%;
   transition: 2s;
   opacity: 0.7;
-  z-index:10;
+  z-index: 10;
 }
 
 #project-extra {
@@ -289,7 +290,7 @@ footer {
 .list-icon {
   padding: 0 15px 0 25px !important;
   color: #000 !important;
-} 
+}
 .icon {
   padding: 0 30px;
   color: #fff;
@@ -310,4 +311,38 @@ footer {
 
 .link-colors:hover {
   color: #4f8;
+}
+
+@media (max-width: 420px) {
+  #header-nav {
+    display: inline-block;
+  }
+  #header-logo {
+    height: 50px;
+    width: 20%;
+  }
+  #header-nav-links {
+    display: none;
+  }
+
+  /* Everything below resized */
+  #about-container {
+    display: inline-block;
+  }
+  .ui.card {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 100%;
+    margin: 8px;
+  }
+  #about-column-right > p {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 14px;
+  }
 }
