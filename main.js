@@ -1,4 +1,33 @@
 new Vue({
+  el: "#header-sec",
+  data: {
+    device: {
+      mobile: false,
+      menu: false,
+      width: 0,
+    },
+  },
+  mounted() {
+    window.addEventListener("resize", this.handleResize());
+    if (this.device.width <= 420) {
+      this.device.mobile = true;
+      // console.log("mobile: ", this.device.mobile);
+    } else {
+      this.device.mobile = false;
+      // console.log("non-mobile: ", this.device.mobile);
+    }
+  },
+  methods: {
+    handleResize() {
+      this.device.width = window.innerWidth;
+      // console.log("test resize", this.device.width);
+    },
+    openMenu() {
+      this.device.menu = !this.device.menu;
+    },
+  },
+});
+new Vue({
   el: "#edu-container",
   data: {
     eduDetails: [
@@ -15,29 +44,40 @@ new Vue({
         institution: "College of Cape Town (Crawford)",
         duration: "Aug - Dec 2017",
         course: "Propel 3 (Cisco)",
-        subject: ["CCNA1", "CCNA2", "Linux Essentials", "IoT", "Cyber-security"],
+        subject: [
+          "CCNA1",
+          "CCNA2",
+          "Linux Essentials",
+          "IoT",
+          "Cyber-security",
+        ],
       },
       {
         image: "https://i.imgur.com/N3TP8EM.jpg",
         institution: "Communiveristy of South Africa",
         duration: "Jan - Jun 2017",
         course: "Pre-Professional course",
-        subject: ["First Aid", " Mathematics", "English", "E-learning competence", "Entrepreneurship"],
+        subject: [
+          "First Aid",
+          " Mathematics",
+          "English",
+          "E-learning competence",
+          "Entrepreneurship",
+        ],
       },
       {
         image: "https://i.imgur.com/pBnVACK.png",
         school: "Crestway High School",
         completed: "2016",
         qualification: "Higher Certificate",
-      }
-    ]
+      },
+    ],
   },
 });
 
 new Vue({
   el: "#exp-container",
   data: {
-
     expDetails: [
       {
         image: "https://imgur.com/QItUUXk",
@@ -51,7 +91,7 @@ new Vue({
         company: "Cyber pitstop",
         postition: "Computer Assistant",
         duration: "2014 - Current",
-        duties: "Assist Customers"
+        duties: "Assist Customers",
       },
       {
         image: "https://i.imgur.com/eq5fITu.jpg",
@@ -60,9 +100,9 @@ new Vue({
         duration: "20 hours(2015)",
         duties: "Waitering",
       },
-    ]
-  }
-})
+    ],
+  },
+});
 
 new Vue({
   el: "#skills-sec",
@@ -126,9 +166,9 @@ new Vue({
         link: "https://vuejs.org/",
         show: false,
       },
-    ]
+    ],
   },
-})
+});
 
 new Vue({
   el: "#projects-sec",
@@ -136,14 +176,16 @@ new Vue({
     projects: [
       {
         image: "./imgs/project1.jpg",
-        description: "Rebuilding jonchretien.com as a form of up skilling in media-queires, grids and basic css.",
-        link: "https://cbazil.github.io/Rebuilding-jonchretien.com/index.html"
+        description:
+          "Rebuilding jonchretien.com as a form of up skilling in media-queires, grids and basic css.",
+        link: "https://cbazil.github.io/Rebuilding-jonchretien.com/index.html",
       },
       {
         image: "./imgs/project2.jpg",
-        description: "Code4CT Project (Life Choices project), Following wireframe and refactor website based off new wireframe.",
-        link: "https://cbazil.github.io/code4ct/index.html"
+        description:
+          "Code4CT Project (Life Choices project), Following wireframe and refactor website based off new wireframe.",
+        link: "https://cbazil.github.io/code4ct/index.html",
       },
-    ]
-  }
-})
+    ],
+  },
+});

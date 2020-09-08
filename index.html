@@ -43,28 +43,49 @@
               width="100%"
               height="100%"
             />
+            <div id="menu-bars" v-if="device.mobile" @click="openMenu">
+              <i class="fas fa-bars" style="color: #4f8; font-size: 32px"></i>
+            </div>
           </div>
           <div id="header-nav-links" class="right item">
-            <div id="link-divs">
+            <div class="link-divs">
               <a href="#about-sec" id="links" class="item"> About </a>
             </div>
-            <div id="link-divs">
+            <div class="link-divs">
               <a href="#education-sec" id="links" class="item"> Education </a>
             </div>
-            <div id="link-divs">
+            <div class="link-divs">
               <a href="#experience-sec" id="links" class="item"> Experience </a>
             </div>
-            <div id="link-divs">
+            <div class="link-divs">
               <a href="#skills-sec" id="links" class="item"> Skills </a>
             </div>
-            <div id="link-divs">
+            <div class="link-divs">
               <a href="#projects-sec" id="links" class="item"> Projects </a>
             </div>
           </div>
         </header>
+        <div id="menu-div" v-if="device.mobile && device.menu">
+          <div id="link-divs">
+            <a href="#about-sec" id="links" class="item"> About </a>
+          </div>
+          <div id="link-divs">
+            <a href="#education-sec" id="links" class="item"> Education </a>
+          </div>
+          <div id="link-divs">
+            <a href="#experience-sec" id="links" class="item"> Experience </a>
+          </div>
+          <div id="link-divs">
+            <a href="#skills-sec" id="links" class="item"> Skills </a>
+          </div>
+          <div id="link-divs">
+            <a href="#projects-sec" id="links" class="item"> Projects </a>
+          </div>
+        </div>
       </div>
+
       <!-- About section -->
-      <div id="about-sec">
+      <!-- <div id="about-sec">
         <h3 class="headings">About Me</h3>
         <div id="about-container">
           <div id="about-column-left">
@@ -78,10 +99,6 @@
                   <h3 class="header">Junior Software Development</h3>
                 </div>
                 <div id="avatar-social-media" class="extra content">
-                  <!-- <a>
-                <i class="user icon"></i>
-                22 Friends
-              </a> -->
                   <div class="icon-div">
                     <a href="https://github.com/Cbazil"
                       ><i class="fab fa-github links"></i
@@ -114,7 +131,7 @@
           </div>
         </div>
       </div>
-      <main>
+       <main>
         <div id="education-sec">
           <h3 class="headings">Education</h3>
           <div id="education-sec-container">
@@ -213,7 +230,6 @@
                     {{ exp.duties }}
                   </div>
                 </div>
-                <!-- <div v-if="edu.skills" class="row"><div class="edu-title four wide column">Skills:</div><div class="edu-details six wide column">{{ edu.skills }}</div></div> -->
               </div>
             </div>
           </div>
@@ -317,7 +333,7 @@
             </div>
           </div>
         </div>
-      </footer>
+      </footer> -->
     </div>
 
     <!-- Load our vue data -->
