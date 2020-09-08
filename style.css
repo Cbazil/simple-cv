@@ -145,9 +145,9 @@ body {
 
 #about-container {
   display: grid;
-  grid-template-columns: 2fr 6fr;
+  grid-template-columns: 2fr 5fr;
   grid-gap: 15px;
-  margin-bottom: 40px;
+  margin-bottom: -75px;
 }
 
 #about-column-left {
@@ -168,7 +168,7 @@ h3.header {
   font-family: "PT Sans Caption", sans-serif;
   /* border-radius: 2px; */
   font-size: 30px;
-  padding: 6%;
+  /* padding: 6%; */
   font-weight: bold;
   /* background-image: url(./imgs/about_img.png);
   background-repeat: no-repeat;
@@ -219,6 +219,7 @@ h3.header {
 } */
 .timelines {
   padding: 20px;
+  margin-top: -30px !important;
 }
 /* .edu-details-bg {
   width: 100%;
@@ -430,4 +431,8 @@ footer {
   /* .timelines {
     padding: 5px;
   } */
+  .ui.celled.grid > .row > .column {
+    padding: 0;
+    padding-left: 4px;
+  }
 }
