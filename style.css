@@ -51,9 +51,9 @@ body {
   #about-column-right > p {
     font-size: 25px;
   }
-  #header-sec {
+  /* #header-sec {
     height: 55px;
-  }
+  } */
   #link-divs > a {
     font-size: 20px !important;
   }
@@ -72,6 +72,7 @@ body {
   grid-template-columns: 1fr 9fr;
   z-index: 1;
   position: fixed;
+  top: 0;
   background-color: inherit;
 }
 #header-logo {
@@ -110,8 +111,6 @@ body {
 /* About section */
 #about-sec {
   margin-top: 10%;
-  position: absolute;
-  width: 100%;
 }
 
 #about-container {
@@ -408,7 +407,6 @@ footer {
     font-size: 12px;
     text-align: center;
     position: absolute;
-    top: 55px;
     margin-top: -10px;
   }
   #menu-div > #link-divs {
@@ -429,4 +427,7 @@ footer {
   #about-sec {
     margin-top: 15%;
   }
+  /* .timelines {
+    padding: 5px;
+  } */
 }
