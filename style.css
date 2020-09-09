@@ -1,10 +1,38 @@
+/* Header styling ===> */
 #header-sec {
   width: 100%;
-  height: auto;
+  height: 6.5%;
   padding: 0;
   background-color: #233;
   position: absolute;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
+
+#header-nav {
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  background-color: inherit;
+}
+#header-logo {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  /* background-color: #ccc; */
+}
+#header-nav-links {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 main,
 html,
 body {
@@ -14,15 +42,16 @@ body {
 #main-container {
   width: 100vw;
 }
-/* @media (min-width: 480px) {
-  main,
-  #about-sec,
-  #header-nav,
-  #contact-sec,
-  #footer-sec {
-    padding: 0px 12% !important;
-  }
-} */
+
+main,
+#about-sec,
+#header-nav,
+#contact-sec,
+#footer-sec {
+  padding: 0px 12% !important;
+}
+
+/* Table view Below */
 @media (max-width: 1024px) {
   #about-column-right {
     padding: 10px;
@@ -53,6 +82,7 @@ body {
     font-size: 18px;
   }
 }
+/* PC View */
 @media (min-width: 1024px) {
   #about-column-right {
     padding: 10px;
@@ -119,7 +149,7 @@ body {
 }
 /* About section */
 #about-sec {
-  margin-top: 10%;
+  margin-top: 12%;
 }
 
 #about-container {
@@ -432,10 +462,11 @@ footer {
   #header-nav,
   #contact-sec,
   #footer-sec {
-    padding: 0px !important;
+    padding: 0 1% !important;
+    margin: 0;
   }
   #about-sec {
-    margin-top: 15%;
+    margin-top: 20%;
   }
   /* .timelines {
     padding: 5px;
