@@ -237,7 +237,7 @@
         <div id="skills-sec" class="ui">
           <h3 class="headings">Skills Acquired</h3>
           <div width="100%" class="ui cards centered">
-            <div v-for="skill in skillDetails"   class="green card skills-div">
+            <div v-for="skill in skillDetails" class="green card skills-div">
               <div
                 v-if="!skill.show"
                 @mouseover="skill.show = true"
@@ -262,12 +262,12 @@
             </div>
           </div>
         </div>
-        <!-- <div id="projects-sec">
+        <div id="projects-sec">
           <h3 class="headings">Projects</h3>
-          <div width="100%" class="ui cards centered">
+          <div width="100%" id="projects-div" class="ui cards centered">
             <div id="project-cards" width="100%" class="ui cards">
               <div
-                id="projects-tabs"
+                class="projects-tabs"
                 v-for="project in projects"
                 class="blue card"
               >
@@ -283,7 +283,7 @@
             </div>
           </div>
         </div>
-      </main> -->
+      </main>
       <!-- <footer>
         <div id="contact-container">
           <div id="contact-sec">
