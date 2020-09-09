@@ -33,14 +33,13 @@
   flex-wrap: wrap;
 }
 
-main,
 html,
 body {
   width: 100vw;
   position: absolute;
 }
 #main-container {
-  width: 100vw;
+  width: 100%;
 }
 
 main,
@@ -120,7 +119,7 @@ main,
 #header-logo {
   width: 100%;
   height: auto;
-  z-index: 1;
+  /* z-index: 1; */
   /* background-color: #ccc; */
 }
 #header-nav-links {
@@ -346,7 +345,7 @@ h3.header {
   height: 110%;
   transition: 2s;
   opacity: 0.7;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 #project-extra {
@@ -397,6 +396,10 @@ footer {
 .link-colors:hover {
   color: #4f8;
 }
+#footer-div {
+  color: white;
+  padding: 25px 0 0 0;
+}
 /* More mobile a approach */
 @media (max-width: 480px) {
   #header-nav {
@@ -445,7 +448,7 @@ footer {
     padding: 15px 0 0 0;
     background-color: #233;
     color: white;
-    z-index: 3;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr;
     /* background-color: #606060; */
@@ -493,5 +496,38 @@ footer {
   }
   #project-img-div {
     height: 200px;
+  }
+  #contact-container {
+    padding: 8px;
+  }
+  .contact {
+    width: -webkit-fill-available !important;
+  }
+  .contact > div {
+    margin: 4px !important;
+  }
+  .contact > h2 {
+    font-size: 18px;
+    margin: 4px !important;
+  }
+  .contact > h3 {
+    font-size: 15px;
+    margin: 4px !important;
+  }
+  #footer-div {
+    padding: 0;
+    margin-top: -15px 0 0 0;
+  }
+  .footer > h5 {
+    display: none;
+  }
+  .footer > h4 {
+    font-size: 14px;
+  }
+  /* .footer-h4 {
+    margin-top: -30px;
+  } */
+  .footer-h4 > h4 {
+    margin-top: -20px;
   }
 }
